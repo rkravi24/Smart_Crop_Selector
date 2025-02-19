@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Find Seeds{% endblock %}
+
+{% block content %}
+
+<div class="bg-img">
+    <img src="{{url_for('static', filename='img/pexels-tomfisk-2789098.jpg')}}" alt="">
+</div>
+<div class="container">
+    <div class="sub-box">
+        <p>Find Right Seeds for Your Crop</p>
+        <div class="item">
+            <!-- Form to submit crop name -->
+            <form id="cropForm" action="{{ url_for('findseeds') }}" method="POST">
+                <input type="text" name="cropName" placeholder="Enter The Crop Name" class="child" required>
+                <button type="submit" class="child">Search right seed</button>
+            </form>
+        </div>
+    </div>
+
+    {% if crop %}
+    <div id="resulstData" class="results">
+        <h2>Best Seeds for {{ crop }}:</h2>
+        <p>{{ bestSeeds }}</p>
+    </div>
+    {% elif error %}
+        <div class="error">
+            <p>{{ error }}</p>
+        </div>
+    {% endif %}
+
+</div>
+
+{% endblock %}

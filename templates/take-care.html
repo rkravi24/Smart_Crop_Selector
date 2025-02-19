@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Smart Crop Selector{% endblock %}
+
+{% block content %}
+<div class="bg-img">
+    <img src="{{ url_for('static', filename='img/pexels-tomfisk-2789098.jpg') }}" alt="Background Image">
+</div>
+
+<div class="container">
+    <div class="sub-box">
+        <p>Crop Details</p>
+        <div class="item">
+            <!-- Update the form action to point to the correct route -->
+            <form id="cropForm" action="{{ url_for('takecare') }}" method="POST">
+                <input type="text" name="cropname" placeholder="Enter The Crop Name" class="child" required>
+                <button type="submit" class="child">Get Details</button>
+            </form>
+        </div>
+    </div>
+
+        {% if crop %}
+            <div class="results">
+                <h2>Details for {{ crop }}:</h2>
+                <p><strong>Seed Type:</strong> {{ seed_type }}</p>
+                <p><strong>Land Required per kg:</strong> {{ land_required_per_kg }}</p>
+                <p><strong>Manure Required:</strong> {{ manure }}</p>
+                <p><strong>Fertilizers Required:</strong> {{ fertilizers }}</p>
+                <p><strong>Sowing Practices:</strong> {{ sowing_practices }}</p>
+            </div>
+        {% elif error %}
+            <div class="error">
+                <p>{{ error }}</p>
+            </div>
+        {% endif %}
+        
+</div>
+
+{% endblock %}

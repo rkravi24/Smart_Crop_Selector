@@ -1,0 +1,26 @@
+<div class="navbar" id="navbar">
+    <div class="left-icon">
+        <div class="logo"> 
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Smart Crop Selector Logo">
+        </div>
+        <div>Smart Crop Selector</div>
+    </div>
+
+    <div class="right-icon">
+        <div class="menu">
+            <ul class="menu-item">
+                <li>Home</li>
+                <li>About</li>
+                <li>City</li>
+            </ul>
+            <form id="city-form">
+                <input type="text" id="cityInput" placeholder="Enter city name">
+                <button id="arrow">></button>
+            </form>
+            <div class="text-box">
+                <p id="weather">00.00 °C | Precipitation: 0 mm | Humidity: 00% | Wind: 0.00 m/s</p>
+            </div>
+        </div>
+    </div>
+</div>
+
