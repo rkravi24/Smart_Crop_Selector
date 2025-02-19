@@ -21,7 +21,6 @@ Flask: Web framework used for building the user interface and handling HTTP requ
 HTML/CSS: Markup and styling languages used for designing the web interface.
 JavaScript: Scripting language used for client-side interactions and enhancing the user interface.
 # Installation and Usage
-Install the required dependencies: pip install -r requirements.txt
 Run the application: python app.py
 Access the application through the web browser at http://localhost:5000
 # Future Enhancements
