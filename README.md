@@ -65,12 +65,11 @@
   - **JSONBin.io API Key:**
   
 
-  - **json data** Required json data given in a separate dir "jsondata" store this in your jsonBin.io
-    account and copy all required api and link and store in ".env". (see required configuration variables in config.py file)
+  - **json data** Required json data given in a separate dir "jsonData" store this in your jsonBin.io
+    account in two separate bin and copy all required api and link. (see required configuration variables in config.py file)
 
   - **.env** Create a .env file in the root directory of your project. Store the     
     configuration variables inside the .env file.
-
 
 
 ### Setup Steps

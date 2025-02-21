@@ -1,0 +1,180 @@
+{
+    "crops": [
+      {
+        "name": "rice",
+        "seed_type": "IR 64, Basmati 1121, Swarna",
+        "land_required_per_kg": "0.1 hectares",
+        "manure": "Farmyard manure (FYM) at 10-12 tons/ha",
+        "fertilizers": "N:P:K at 100:50:50 kg/ha",
+        "sowing_practices": "Sow in well-puddled soil, maintain 2-3 cm water level, transplant seedlings at 20-25 days old."
+      },
+      {
+        "name": "maize",
+        "seed_type": "Dekalb 9108, Pioneer P3396, Syngenta NK7328",
+        "land_required_per_kg": "0.05 hectares",
+        "manure": "Compost at 5-10 tons/ha",
+        "fertilizers": "N:P:K at 120:60:40 kg/ha",
+        "sowing_practices": "Sow in rows 60 cm apart, plant seeds 3-4 cm deep, ensure adequate moisture."
+      },
+      {
+        "name": "jute",
+        "seed_type": "JRO 524, JRO 66, JRO 8432",
+        "land_required_per_kg": "0.2 hectares",
+        "manure": "FYM at 10 tons/ha",
+        "fertilizers": "N:P:K at 40:20:20 kg/ha",
+        "sowing_practices": "Sow in well-drained soil, maintain soil moisture, thin seedlings to 5-7 cm apart."
+      },
+      {
+        "name": "cotton",
+        "seed_type": "RCH-2, JKCH-1947, Bunny Bt",
+        "land_required_per_kg": "0.1 hectares",
+        "manure": "FYM at 12-15 tons/ha",
+        "fertilizers": "N:P:K at 60:30:30 kg/ha",
+        "sowing_practices": "Sow in rows 90-120 cm apart, plant seeds 2-3 cm deep, ensure proper irrigation."
+      },
+      {
+        "name": "coconut",
+        "seed_type": "West Coast Tall, Chowghat Orange Dwarf, Kalpa Vriksha",
+        "land_required_per_kg": "1 hectare per 150-200 plants",
+        "manure": "FYM at 50 kg/plant/year",
+        "fertilizers": "N:P:K at 500:320:1200 g/plant/year",
+        "sowing_practices": "Plant seedlings in pits of 1x1x1 m, ensure good drainage, irrigate regularly."
+      },
+      {
+        "name": "papaya",
+        "seed_type": "Red Lady, Pusa Dwarf, Coorg Honey Dew",
+        "land_required_per_kg": "0.05 hectares",
+        "manure": "FYM at 20-25 tons/ha",
+        "fertilizers": "N:P:K at 200:250:500 g/plant/year",
+        "sowing_practices": "Sow in nursery, transplant seedlings at 6-8 weeks, maintain spacing of 1.8x1.8 m."
+      },
+      {
+        "name": "orange",
+        "seed_type": "Nagpur Orange, Valencia, Jaffa",
+        "land_required_per_kg": "1 hectare per 200-250 plants",
+        "manure": "FYM at 20-25 kg/plant/year",
+        "fertilizers": "N:P:K at 600:300:300 g/plant/year",
+        "sowing_practices": "Plant in pits of 60x60x60 cm, ensure good drainage, irrigate regularly."
+      },
+      {
+        "name": "apple",
+        "seed_type": "Gala, Honeycrisp, Red Delicious",
+        "land_required_per_kg": "1 hectare per 200-300 plants",
+        "manure": "FYM at 20-30 kg/plant/year",
+        "fertilizers": "N:P:K at 700:350:700 g/plant/year",
+        "sowing_practices": "Plant in pits of 1x1x1 m, ensure good drainage, irrigate regularly."
+      },
+      {
+        "name": "muskmelon",
+        "seed_type": "Hales Best Jumbo, Sugar Cube, Athena",
+        "land_required_per_kg": "0.05 hectares",
+        "manure": "FYM at 15-20 tons/ha",
+        "fertilizers": "N:P:K at 60:40:40 kg/ha",
+        "sowing_practices": "Sow in rows 1.5-2 m apart, plant seeds 2-3 cm deep, ensure adequate moisture."
+      },
+      {
+        "name": "watermelon",
+        "seed_type": "Sugar Baby, Crimson Sweet, Charleston Gray",
+        "land_required_per_kg": "0.05 hectares",
+        "manure": "FYM at 15-20 tons/ha",
+        "fertilizers": "N:P:K at 60:40:40 kg/ha",
+        "sowing_practices": "Sow in rows 1.5-2 m apart, plant seeds 2-3 cm deep, ensure adequate moisture."
+      },
+      {
+        "name": "grapes",
+        "seed_type": "Thompson Seedless, Concord, Red Globe",
+        "land_required_per_kg": "1 hectare per 2000-3000 vines",
+        "manure": "FYM at 20-25 tons/ha",
+        "fertilizers": "N:P:K at 600:300:300 kg/ha",
+        "sowing_practices": "Plant cuttings in pits of 60x60x60 cm, ensure good drainage, train vines on trellis."
+      },
+      {
+        "name": "mango",
+        "seed_type": "Alphonso, Kesar, Dasheri",
+        "land_required_per_kg": "1 hectare per 100-150 plants",
+        "manure": "FYM at 20-25 kg/plant/year",
+        "fertilizers": "N:P:K at 1.5:1:1.5 kg/plant/year",
+        "sowing_practices": "Plant in pits of 1x1x1 m, ensure good drainage, irrigate regularly."
+      },
+      {
+        "name": "banana",
+        "seed_type": "Robusta, Grand Naine, Red Banana",
+        "land_required_per_kg": "1 hectare per 2000-2500 plants",
+        "manure": "FYM at 20-25 tons/ha",
+        "fertilizers": "N:P:K at 200:100:300 g/plant/year",
+        "sowing_practices": "Plant suckers in pits of 45x45x45 cm, ensure good drainage, irrigate regularly."
+      },
+      {
+        "name": "pomegranate",
+        "seed_type": "Bhagwa, Ganesh, Mridula",
+        "land_required_per_kg": "1 hectare per 200-250 plants",
+        "manure": "FYM at 20-25 kg/plant/year",
+        "fertilizers": "N:P:K at 600:300:300 g/plant/year",
+        "sowing_practices": "Plant in pits of 60x60x60 cm, ensure good drainage, irrigate regularly."
+      },
+      {
+        "name": "lentil",
+        "seed_type": "PL-406, VL Masoor-507, IPL-316",
+        "land_required_per_kg": "0.1 hectares",
+        "manure": "FYM at 10-12 tons/ha",
+        "fertilizers": "N:P:K at 20:40:20 kg/ha",
+        "sowing_practices": "Sow in rows 30 cm apart, plant seeds 2-3 cm deep, ensure adequate moisture."
+      },
+      {
+        "name": "blackgram",
+        "seed_type": "PU-31, T-9, Pant U-19",
+        "land_required_per_kg": "0.1 hectares",
+        "manure": "FYM at 10-12 tons/ha",
+        "fertilizers": "N:P:K at 20:40:20 kg/ha",
+        "sowing_practices": "Sow in rows 30 cm apart, plant seeds 2-3 cm deep, ensure adequate moisture."
+      },
+      {
+        "name": "mungbean",
+        "seed_type": "Pusa Vishal, SML 668, K 851",
+        "land_required_per_kg": "0.1 hectares",
+        "manure": "FYM at 10-12 tons/ha",
+        "fertilizers": "N:P:K at 20:40:20 kg/ha",
+        "sowing_practices": "Sow in rows 30 cm apart, plant seeds 2-3 cm deep, ensure adequate moisture."
+      },
+      {
+        "name": "mothbeans",
+        "seed_type": "RMO-40, RMO-225, RMO-257",
+        "land_required_per_kg": "0.1 hectares",
+        "manure": "FYM at 10-12 tons/ha",
+        "fertilizers": "N:P:K at 20:40:20 kg/ha",
+        "sowing_practices": "Sow in rows 30 cm apart, plant seeds 2-3 cm deep, ensure adequate moisture."
+      },
+      {
+        "name": "pigeonpeas",
+        "seed_type": "ICPL 87, BDN-2, UPAS-120",
+        "land_required_per_kg": "0.1 hectares",
+        "manure": "FYM at 10-12 tons/ha",
+        "fertilizers": "N:P:K at 20:40:20 kg/ha",
+        "sowing_practices": "Sow in rows 60 cm apart, plant seeds 4-5 cm deep, ensure adequate moisture."
+      },
+      {
+        "name": "kidneybeans",
+        "seed_type": "HUR-137, VL Rajma 63, Arun",
+        "land_required_per_kg": "0.1 hectares",
+        "manure": "FYM at 10-12 tons/ha",
+        "fertilizers": "N:P:K at 20:40:20 kg/ha",
+        "sowing_practices": "Sow in rows 45 cm apart, plant seeds 3-4 cm deep, ensure adequate moisture."
+      },
+      {
+        "name": "chickpea",
+        "seed_type": "Pusa 362, JG 11, ICCV 10",
+        "land_required_per_kg": "0.1 hectares",
+        "manure": "FYM at 10-12 tons/ha",
+        "fertilizers": "N:P:K at 20:40:20 kg/ha",
+        "sowing_practices": "Sow in rows 30 cm apart, plant seeds 4-5 cm deep, ensure adequate moisture."
+      },
+      {
+        "name": "coffee",
+        "seed_type": "Arabica, Robusta, Liberica",
+        "land_required_per_kg": "1 hectare per 1000-2000 plants",
+        "manure": "FYM at 10-15 tons/ha",
+        "fertilizers": "N:P:K at 100:40:140 kg/ha",
+        "sowing_practices": "Sow in nursery, transplant seedlings at 6-8 months, maintain spacing of 2x2 m."
+      }
+    ]
+  }

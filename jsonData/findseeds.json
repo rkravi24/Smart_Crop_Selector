@@ -1,0 +1,92 @@
+{
+    "seeds": [
+      {
+        "crop": "rice",
+        "bestSeeds": "IR 64, Basmati 1121, Swarna"
+      },
+      {
+        "crop": "maize",
+        "bestSeeds": "Dekalb 9108, Pioneer P3396, Syngenta NK7328"
+      },
+      {
+        "crop": "jute",
+        "bestSeeds": "JRO 524, JRO 66, JRO 8432"
+      },
+      {
+        "crop": "cotton",
+        "bestSeeds": "RCH-2, JKCH-1947, Bunny Bt"
+      },
+      {
+        "crop": "coconut",
+        "bestSeeds": "West Coast Tall, Chowghat Orange Dwarf, Kalpa Vriksha"
+      },
+      {
+        "crop": "papaya",
+        "bestSeeds": "Red Lady, Pusa Dwarf, Coorg Honey Dew"
+      },
+      {
+        "crop": "orange",
+        "bestSeeds": "Nagpur Orange, Valencia, Jaffa"
+      },
+      {
+        "crop": "apple",
+        "bestSeeds": "Gala, Honeycrisp, Red Delicious"
+      },
+      {
+        "crop": "muskmelon",
+        "bestSeeds": "Hales Best Jumbo, Sugar Cube, Athena"
+      },
+      {
+        "crop": "watermelon",
+        "bestSeeds": "Sugar Baby, Crimson Sweet, Charleston Gray"
+      },
+      {
+        "crop": "grapes",
+        "bestSeeds": "Thompson Seedless, Concord, Red Globe"
+      },
+      {
+        "crop": "mango",
+        "bestSeeds": "Alphonso, Kesar, Dasheri"
+      },
+      {
+        "crop": "banana",
+        "bestSeeds": "Robusta, Grand Naine, Red Banana"
+      },
+      {
+        "crop": "pomegranate",
+        "bestSeeds": "Bhagwa, Ganesh, Mridula"
+      },
+      {
+        "crop": "lentil",
+        "bestSeeds": "PL-406, VL Masoor-507, IPL-316"
+      },
+      {
+        "crop": "blackgram",
+        "bestSeeds": "PU-31, T-9, Pant U-19"
+      },
+      {
+        "crop": "mungbean",
+        "bestSeeds": "Pusa Vishal, SML 668, K 851"
+      },
+      {
+        "crop": "mothbeans",
+        "bestSeeds": "RMO-40, RMO-225, RMO-257"
+      },
+      {
+        "crop": "pigeonpeas",
+        "bestSeeds": "ICPL 87, BDN-2, UPAS-120"
+      },
+      {
+        "crop": "kidneybeans",
+        "bestSeeds": "HUR-137, VL Rajma 63, Arun"
+      },
+      {
+        "crop": "chickpea",
+        "bestSeeds": "Pusa 362, JG 11, ICCV 10"
+      },
+      {
+        "crop": "coffee",
+        "bestSeeds": "Arabica, Robusta, Liberica"
+      }
+    ]
+  }
