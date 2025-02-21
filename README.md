@@ -49,13 +49,19 @@
 
 ---
 
-
-
+### Setup Steps
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/rkravi24/Smart_Crop_Selector
+   cd Smart_Crop_Selector
 
 ---
 
 ## Installation
+- make a virtual enviroment
+- pip install -r requirements.txt
 
+---
 
 ### Prerequisites
 - Python 3.x installed on your machine.
@@ -71,9 +77,3 @@
   - **.env** Create a .env file in the root directory of your project. Store the     
     configuration variables inside the .env file.
 
-
-### Setup Steps
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/rkravi24/Smart_Crop_Selector
-   cd Smart_Crop_Selector
