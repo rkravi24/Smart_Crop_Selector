@@ -62,8 +62,6 @@
 - A modern web browser for the frontend.
 - Required API keys:
   - **OpenWeatherMap API Key:**
-  - **json data**
-  - **.env**
   - **JSONBin.io API Key:**
   
 
