@@ -61,8 +61,19 @@
 - Python 3.x installed on your machine.
 - A modern web browser for the frontend.
 - Required API keys:
-  - **OpenWeatherMap API Key:** Replace the placeholder in the JavaScript (`script.js`) file.
-  - **JSONBin.io API Key:** Already included in the Flask app, but you can update it if necessary.
+  - **OpenWeatherMap API Key:**
+  - **json data**
+  - **.env**
+  - **JSONBin.io API Key:**
+  
+
+  - **json data** Required json data given in a separate dir "jsondata" store this in your jsonBin.io
+    account and copy all required api and link and store in ".env". (see required configuration variables in config.py file)
+
+  - **.env** Create a .env file in the root directory of your project. Store the     
+    configuration variables inside the .env file.
+
+
 
 ### Setup Steps
 1. **Clone the Repository:**
