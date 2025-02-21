@@ -12,7 +12,7 @@
         <p>Crop Details</p>
         <div class="item">
             <!-- Update the form action to point to the correct route -->
-            <form id="cropForm" action="{{ url_for('takecare') }}" method="POST">
+            <form id="cropForm" action="{{ url_for('getdetails') }}" method="POST">
                 <input type="text" name="cropname" placeholder="Enter The Crop Name" class="child" required>
                 <button type="submit" class="child">Get Details</button>
             </form>

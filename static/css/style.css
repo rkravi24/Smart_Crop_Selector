@@ -14,6 +14,11 @@ body{
     justify-content: space-between;
 }
 
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+
 .left-icon{
     /* background-color: bisque; */
     /* border: 2px solid black; */

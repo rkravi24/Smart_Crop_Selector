@@ -1,11 +1,14 @@
-from flask import Flask,request,render_template
+import os
+from flask import Flask,request,render_template, jsonify 
+from config import JSONBIN_URL, FIND_SEEDS_URL, HEADERS, JS_API_KEY
+
 import numpy as np
-import pandas
-import sklearn
 import pickle
 import requests
 
 app = Flask(__name__)
+
+
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 model = pickle.load(open('model.pkl','rb'))
 sc = pickle.load(open('standscaler.pkl','rb'))
@@ -14,14 +17,9 @@ ms = pickle.load(open('minmaxscaler.pkl','rb'))
 
 
 #++++++++++++++++++++ JSONBin.io details ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-JSONBIN_BIN_ID = "67addfb8acd3cb34a8e06bd8"
-JSONBIN_API_KEY = "$2a$10$FSoZINyJcgRUh6lUY2xpuOH5WgwdMAPKnNYVs5OJymxsKlDmWXgRq"
-JSONBIN_URL = f"https://api.jsonbin.io/v3/b/{JSONBIN_BIN_ID}/latest"
-
-FIND_SEEDS_URL = "https://api.jsonbin.io/v3/b/67ade000acd3cb34a8e06c1a"
-HEADERS = {
-    "X-Master-Key": "$2a$10$FSoZINyJcgRUh6lUY2xpuOH5WgwdMAPKnNYVs5OJymxsKlDmWXgRq"
-}
+@app.route('/get-js-api-key')  
+def get_js_api_key():  
+    return jsonify({"js_api_key": JS_API_KEY})
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
@@ -32,12 +30,15 @@ def home():
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-#+++++++++++++++++++++++++++++++++++++++PREDICT CROP++++++++++++++++++++++++++++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+@app.route('/about')
+def about():
+    return render_template("about.html")
 
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-#+++++++++++++++++++++++++++++++++++++++FIND SEEDS TEMPLATE+++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++FIND SEEDS TEMPLATE++++++++++++++++++++++++++++++++++++++++++
 @app.route('/findseeds', methods=['GET', 'POST'])
 def findseeds():
     crop = None
@@ -65,21 +66,21 @@ def findseeds():
             error = f"No internet connection"
 
     return render_template('find-seeds.html', crop=crop, bestSeeds=bestSeeds, error=error)
-#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-#+++++++++++++++++++++++++++++++++ HOW TO SOW TEMPLATE ++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++ HOW TO SOW TEMPLATE ++++++++++++++++++++++++++++++++++++++++++++
 def fetch_crop_data():
     try:
         response = requests.get(JSONBIN_URL, headers=HEADERS)
-        response.raise_for_status()  # Raise an error for bad status codes
+        response.raise_for_status()
         return response.json().get("record", {}).get("crops", [])
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data from JSONBin: {e}")
         return []
     
-@app.route('/howtosow', methods=['GET', 'POST'])
-def takecare():
+@app.route('/getdetails', methods=['GET', 'POST'])
+def getdetails():
     if request.method == 'POST':
         crop_name = request.form.get('cropname').lower() 
         crops = fetch_crop_data()
@@ -90,26 +91,23 @@ def takecare():
                 crop_details = crop
                 break
         if crop_details:
-            return render_template('take-care.html', 
-                                   crop=crop_details["name"].capitalize(),
-                                   seed_type=crop_details["seed_type"],
-                                   land_required_per_kg=crop_details["land_required_per_kg"],
-                                   manure=crop_details["manure"],
-                                   fertilizers=crop_details["fertilizers"],
-                                   sowing_practices=crop_details["sowing_practices"])
-        
+            return render_template('getdetails.html', 
+                crop=crop_details["name"].capitalize(),
+                seed_type=crop_details["seed_type"],
+                land_required_per_kg=crop_details["land_required_per_kg"],
+                manure=crop_details["manure"],
+                fertilizers=crop_details["fertilizers"],
+                sowing_practices=crop_details["sowing_practices"])
         else:
-            return render_template('take-care.html', error=f"Crop '{crop_name}' not found")
-    return render_template('take-care.html')
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            return render_template('getdetails.html', error=f"Crop '{crop_name}' not found")
+    return render_template('getdetails.html')
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 @app.route('/predictpage')
 def predictpage():
     return render_template('predict_page.html')
-
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 @app.route("/predict",methods=['POST'])
 def predict():
