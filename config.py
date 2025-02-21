@@ -10,7 +10,7 @@ JS_API_KEY = os.getenv("JS_API_KEY")
 JSONBIN_BIN_ID = os.getenv("JSONBIN_BIN_ID")
 JSONBIN_API_KEY = os.getenv("JSONBIN_API_KEY")
 
-Get_Details_URL = os.getenv("Get_Details_URL")
+GET_DETAILS_URL = os.getenv("GET_DETAILS_URL")
 FIND_SEEDS_URL = os.getenv("FIND_SEEDS_URL")
 
 HEADERS = {

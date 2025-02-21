@@ -1,6 +1,6 @@
 import os
 from flask import Flask,request,render_template, jsonify 
-from config import Get_Details_URL, FIND_SEEDS_URL, HEADERS, JS_API_KEY
+from config import GET_DETAILS_URL, FIND_SEEDS_URL, HEADERS, JS_API_KEY
 
 import numpy as np
 import pickle
@@ -72,7 +72,7 @@ def findseeds():
 #+++++++++++++++++++++++++++++++++ HOW TO SOW TEMPLATE ++++++++++++++++++++++++++++++++++++++++++++
 def fetch_crop_data():
     try:
-        response = requests.get(Get_Details_URL, headers=HEADERS)
+        response = requests.get(GET_DETAILS_URL, headers=HEADERS)
         response.raise_for_status()
         return response.json().get("record", {}).get("crops", [])
     except requests.exceptions.RequestException as e:
