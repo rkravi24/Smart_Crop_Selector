@@ -1,0 +1,11 @@
+.body-section{
+    background-color: rgb(221, 239, 248);
+    overflow-y: auto;
+}
+.item-box{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 1rem;
+}

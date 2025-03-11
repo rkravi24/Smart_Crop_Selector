@@ -1,5 +1,60 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1></h1>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+
+<div class="item-box">
+    <div class="text2">
+        <h4 style="text-align:center">
+            Smart Crop Selector is an intelligent web-based platform designed to assist farmers, 
+            agricultural researchers, and enthusiasts in making data-driven decisions about crop 
+            selection, seed recommendations, and crop-specific information. Using a Machine 
+            Learning model, the system provides accurate crop predictions based on Temperature, pH Value etc. 
+        </h4>
+    </div>
+
+    <div class="text2">
+        <h2>Features Overview</h2>
+        <ul>
+            <h3>Input Parameters:</h3>
+            <li>Nitrogen (N): Enter nitrogen content in the soil (mg/kg).</li>
+            <li>Phosphorus (P): Enter phosphorus content in the soil (mg/kg).</li>
+            <li>Potassium (K): Enter potassium content in the soil (mg/kg).</li>
+            <li>Temperature: Enter the temperature in °C.</li>
+            <li>Humidity: Enter the humidity percentage (%).</li>
+            <li>pH Value: Enter the soil pH level.</li>
+            <li>Rainfall: Enter the annual rainfall (mm).</li>
+            <h3>Output:
+                The system analyzes the input data using a Machine Learning model and suggests the most suitable crop for cultivation.
+            </h3>
+        </ul>
+    </div>
+    <div class="text2">
+        <h2>Seed Recommendation System</h2>
+        <ul>
+            <h3>The Seed Recommendation System suggests the best-quality seeds for a given crop based on store jsonBIN data.
+            </h3>
+            <h3>Input Parameters:</h3>
+            <p>Enter the name of the crop (e.g., "Wheat", "Rice", "Maize").</p>
+            <h3>Output:
+                A list of recommended high-yielding, disease-resistant seed varieties suitable for the selected crop.
+            </h3>
+        </ul>
+    </div>
+    <div class="text2">
+        <h2>Crop Information System</h2>
+        <ul>
+            <h3>Input Parameters:</h3>
+            <p> Enter the name of the crop (e.g., "Wheat", "Rice", "Maize").</p>
+            <h3>Output:</h3>
+            <li>Seed Type:</li>
+            <li>Land Required per kg:</li>
+            <li>Manure Required:</li>
+            <li>Fertilizers Required:</li>
+            <li>Sowing Practices:</li>
+        </ul>
+    </div>
+</div>
+
 {% endblock  %}

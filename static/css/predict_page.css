@@ -63,12 +63,13 @@
 .btn:hover{
     background-color:  rgb(242, 56, 56);
     transform: scale(1.05);
+
 }
 
 
 .result_box{
     margin-top: 0.5rem;
-    padding: 2rem;
+    padding: 0rem 1rem;
     font-size: 1.5rem;
     border-radius: 10px;
     border: 2px solid red;
