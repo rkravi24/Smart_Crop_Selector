@@ -9,3 +9,8 @@
     flex-wrap: wrap;
     margin: 1rem;
 }
+
+.text2 h2{
+    color: red;
+    background-color: rgba(116, 208, 156, 0.33);
+}

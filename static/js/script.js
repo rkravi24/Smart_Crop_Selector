@@ -1,6 +1,15 @@
 document.addEventListener("DOMContentLoaded", async function () {
     console.log("JS file loaded!");
 
+    // Check if this is a reload using the Performance API
+    const navType = performance.getEntriesByType("navigation")[0]?.type;
+
+    if (navType === "reload") {
+        console.log("Page reloaded. Clearing weather data.");
+        sessionStorage.removeItem("weatherCity");
+        sessionStorage.removeItem("weatherData");
+    }
+
     const weather = document.getElementById('weather');
     const arrow = document.getElementById('arrow');
     const input = document.getElementById('cityInput');

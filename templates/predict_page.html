@@ -68,4 +68,25 @@
         </div>
     </div>
 
+    <script>
+        window.addEventListener("load", function () {
+            const navType = performance.getEntriesByType("navigation")[0]?.type;
+            if (navType === "reload") {
+                console.log("Page refreshed - clearing form and result");
+    
+                // Reset form
+                const form = document.querySelector("form");
+                if (form) {
+                    form.reset();
+                }
+    
+                // Clear result box content
+                const resultBox = document.querySelector(".result_box");
+                if (resultBox) {
+                    resultBox.innerHTML = ""; // remove previous result
+                }
+            }
+        });
+    </script>
+    
 {% endblock %}
